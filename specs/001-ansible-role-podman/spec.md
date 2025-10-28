@@ -65,6 +65,10 @@ As a system administrator, I want to apply the Ansible role to a server running 
 -   **FR-007**: The role MUST fail gracefully with a clear error message if run on an unsupported operating system.
 -   **FR-008**: The role MUST validate the format of provided registry URIs. If a URI is invalid, the role MUST fail the Ansible run and provide a clear error message.
 
+### Non-Functional Requirements
+
+-   **NFR-001**: The role MUST document all input variables in the `README.md` file, including their name, description, and default value.
+
 ## Assumptions
 
 - The target systems have internet access to download the `podman` package from the official repositories.
