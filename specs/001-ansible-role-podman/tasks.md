@@ -63,16 +63,16 @@ description: "Task list template for feature implementation"
 
 ### Implementation for User Story 1
 
-- [ ] T013 [P] [US1] Implement package installation for Debian family in `/home/apaz074/projects/ansible-role-podman/tasks/install.yml` and `/home/apaz074/projects/ansible-role-podman/vars/Debian.yml`
-- [ ] T014 [P] [US1] Implement package installation for RHEL family in `/home/apaz074/projects/ansible-role-podman/tasks/install.yml` and `/home/apaz074/projects/ansible-role-podman/vars/RedHat.yml`
-- [ ] T015 [P] [US1] Implement package installation for Arch Linux family in `/home/apaz074/projects/ansible-role-podman/tasks/install.yml` and `/home/apaz074/projects/ansible-role-podman/vars/Archlinux.yml`
-- [ ] T016 [P] [US1] Implement service management for Debian family in `/home/apaz074/projects/ansible-role-podman/tasks/service.yml`
-- [ ] T017 [P] [US1] Implement service management for RHEL family in `/home/apaz074/projects/ansible-role-podman/tasks/service.yml`
-- [ ] T018 [P] [US1] Implement service management for Arch Linux family in `/home/apaz074/projects/ansible-role-podman/tasks/service.yml`
-- [ ] T019 [US1] Add Molecule test for Podman installation and service status on Debian in `/home/apaz074/projects/ansible-role-podman/molecule/default/verify.yml`
-- [ ] T020 [US1] Add Molecule test for Podman installation and service status on RHEL in `/home/apaz074/projects/ansible-role-podman/molecule/default/verify.yml`
-- [ ] T021 [US1] Add Molecule test for Podman installation and service status on Arch Linux in `/home/apaz074/projects/ansible-role-podman/molecule/default/verify.yml`
-- [ ] T022 [US1] Add Molecule idempotency test for Podman installation in `/home/apaz074/projects/ansible-role-podman/molecule/default/verify.yml`
+- [x] T013 [P] [US1] Implement package installation for Debian family in `/home/apaz074/projects/ansible-role-podman/tasks/install.yml` and `/home/apaz074/projects/ansible-role-podman/vars/Debian.yml`
+- [x] T014 [P] [US1] Implement package installation for RHEL family in `/home/apaz074/projects/ansible-role-podman/tasks/install.yml` and `/home/apaz074/projects/ansible-role-podman/vars/RedHat.yml`
+- [x] T015 [P] [US1] Implement package installation for Arch Linux family in `/home/apaz074/projects/ansible-role-podman/tasks/install.yml` and `/home/apaz074/projects/ansible-role-podman/vars/Archlinux.yml`
+- [x] T016 [P] [US1] Implement service management for Debian family in `/home/apaz074/projects/ansible-role-podman/tasks/service.yml`
+- [x] T017 [P] [US1] Implement service management for RHEL family in `/home/apaz074/projects/ansible-role-podman/tasks/service.yml`
+- [x] T018 [P] [US1] Implement service management for Arch Linux family in `/home/apaz074/projects/ansible-role-podman/tasks/service.yml`
+- [x] T019 [US1] Add Molecule test for Podman installation and service status on Debian in `/home/apaz074/projects/ansible-role-podman/molecule/default/verify.yml`
+- [x] T020 [US1] Add Molecule test for Podman installation and service status on RHEL in `/home/apaz074/projects/ansible-role-podman/molecule/default/verify.yml`
+- [x] T021 [US1] Add Molecule test for Podman installation and service status on Arch Linux in `/home/apaz074/projects/ansible-role-podman/molecule/default/verify.yml`
+- [x] T022 [US1] Add Molecule idempotency test for Podman installation in `/home/apaz074/projects/ansible-role-podman/molecule/default/verify.yml`
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
 
