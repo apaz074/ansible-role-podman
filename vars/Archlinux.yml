@@ -1,0 +1,3 @@
+---
+podman_package_name: "podman"
+podman_service_name: "podman.socket"
