@@ -29,12 +29,12 @@ description: "Task list template for feature implementation"
 
 **Purpose**: Project initialization and basic structure
 
-- [ ] T001 Create basic Ansible role structure (defaults, tasks, handlers, vars, meta, tests) in `/home/apaz074/projects/ansible-role-podman/`
-- [ ] T002 Configure Molecule for Podman driver and multi-OS testing in `/home/apaz074/projects/ansible-role-podman/molecule/default/molecule.yml`
-- [ ] T003 Create Molecule `create.yml` playbook for Podman containers in `/home/apaz074/projects/ansible-role-podman/molecule/default/create.yml`
-- [ ] T004 Create Molecule `destroy.yml` playbook for Podman containers in `/home/apaz074/projects/ansible-role-podman/molecule/default/destroy.yml`
-- [ ] T005 Create Molecule `converge.yml` playbook to apply the role in `/home/apaz074/projects/ansible-role-podman/molecule/default/converge.yml`
-- [ ] T006 Create Molecule `verify.yml` playbook for initial verification in `/home/apaz074/projects/ansible-role-podman/molecule/default/verify.yml`
+- [x] T001 Create basic Ansible role structure (defaults, tasks, handlers, vars, meta, tests) in `/home/apaz074/projects/ansible-role-podman/`
+- [x] T002 Configure Molecule for ansible driver and multi-OS testing in `/home/apaz074/projects/ansible-role-podman/molecule/default/molecule.yml`
+- [x] T003 Create Molecule `create.yml` playbook for Podman containers in `/home/apaz074/projects/ansible-role-podman/molecule/default/create.yml`
+- [x] T004 Create Molecule `destroy.yml` playbook for Podman containers in `/home/apaz074/projects/ansible-role-podman/molecule/default/destroy.yml`
+- [x] T005 Create Molecule `converge.yml` playbook to apply the role in `/home/apaz074/projects/ansible-role-podman/molecule/default/converge.yml`
+- [x] T006 Create Molecule `verify.yml` playbook for initial verification in `/home/apaz074/projects/ansible-role-podman/molecule/default/verify.yml`
 
 ---
 
@@ -44,12 +44,12 @@ description: "Task list template for feature implementation"
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T007 Implement multi-OS package installation logic in `/home/apaz074/projects/ansible-role-podman/tasks/install.yml`
-- [ ] T008 Implement multi-OS service management logic in `/home/apaz074/projects/ansible-role-podman/tasks/service.yml`
-- [ ] T009 Include `install.yml` and `service.yml` in `/home/apaz074/projects/ansible-role-podman/tasks/main.yml`
-- [ ] T010 Define default variables for `podman_package_name`, `podman_service_name` in `/home/apaz074/projects/ansible-role-podman/defaults/main.yml`
-- [ ] T011 Create OS-specific variable files for Debian (`vars/Debian.yml`), RHEL (`vars/RedHat.yml`), and Arch Linux (`vars/Archlinux.yml`)
-- [ ] T012 Implement graceful failure for unsupported operating systems in `/home/apaz074/projects/ansible-role-podman/tasks/main.yml`
+- [x] T007 Implement multi-OS package installation logic in `/home/apaz074/projects/ansible-role-podman/tasks/install.yml`
+- [x] T008 Implement multi-OS service management logic in `/home/apaz074/projects/ansible-role-podman/tasks/service.yml`
+- [x] T009 Include `install.yml` and `service.yml` in `/home/apaz074/projects/ansible-role-podman/tasks/main.yml`
+- [x] T010 Define default variables for `podman_package_name`, `podman_service_name` in `/home/apaz074/projects/ansible-role-podman/defaults/main.yml`
+- [x] T011 Create OS-specific variable files for Debian (`vars/Debian.yml`), RHEL (`vars/RedHat.yml`), and Arch Linux (`vars/Archlinux.yml`)
+- [x] T012 Implement graceful failure for unsupported operating systems in `/home/apaz074/projects/ansible-role-podman/tasks/main.yml`
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
