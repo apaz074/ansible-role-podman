@@ -2,4 +2,49 @@
 - name: Verify
   hosts: all
   gather_facts: false
-  tasks: []
+  tasks:
+    - name: Gather package facts
+      ansible.builtin.package_facts:
+        manager: auto
+
+    - name: Gather service facts
+      ansible.builtin.service_facts:
+
+    - name: Verify Podman package is installed on Debian
+      ansible.builtin.assert:
+        that:
+          - "'podman' in ansible_facts.packages"
+      when: ansible_os_family == 'Debian'
+
+    - name: Verify podman.socket is running and enabled on Debian
+      ansible.builtin.assert:
+        that:
+          - "ansible_facts.services['podman.socket'].state == 'running'"
+          - "ansible_facts.services['podman.socket'].status == 'enabled'"
+      when: ansible_os_family == 'Debian'
+
+    - name: Verify Podman package is installed on RHEL
+      ansible.builtin.assert:
+        that:
+          - "'podman' in ansible_facts.packages"
+      when: ansible_os_family == 'RedHat'
+
+    - name: Verify podman.socket is running and enabled on RHEL
+      ansible.builtin.assert:
+        that:
+          - "ansible_facts.services['podman.socket'].state == 'running'"
+          - "ansible_facts.services['podman.socket'].status == 'enabled'"
+      when: ansible_os_family == 'RedHat'
+
+    - name: Verify Podman package is installed on Archlinux
+      ansible.builtin.assert:
+        that:
+          - "'podman' in ansible_facts.packages"
+      when: ansible_os_family == 'Archlinux'
+
+    - name: Verify podman.socket is running and enabled on Archlinux
+      ansible.builtin.assert:
+        that:
+          - "ansible_facts.services['podman.socket'].state == 'running'"
+          - "ansible_facts.services['podman.socket'].status == 'enabled'"
+      when: ansible_os_family == 'Archlinux'
