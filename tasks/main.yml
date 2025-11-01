@@ -14,3 +14,6 @@
 
 - name: Include service management tasks
   ansible.builtin.include_tasks: service.yml
+
+- name: Include registry configuration tasks
+  ansible.builtin.include_tasks: configure_registries.yml

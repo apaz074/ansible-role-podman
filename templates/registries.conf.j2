@@ -1,0 +1,10 @@
+# Ansible-managed
+
+[registries.search]
+registries = [{% for registry in registries_search %}"{{ registry }}"{% if not loop.last %}, {% endif %}{% endfor %}]
+
+[registries.insecure]
+registries = [{% for registry in registries_insecure %}"{{ registry }}"{% if not loop.last %}, {% endif %}{% endfor %}]
+
+[registries.block]
+registries = [{% for registry in registries_block %}"{{ registry }}"{% if not loop.last %}, {% endif %}{% endfor %}]

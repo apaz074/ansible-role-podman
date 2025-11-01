@@ -3,3 +3,7 @@
 
 podman_package_name: "podman"
 podman_service_name: "podman.socket"
+
+registries_search: []
+registries_insecure: []
+registries_block: []

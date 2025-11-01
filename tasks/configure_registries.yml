@@ -1,0 +1,15 @@
+---
+- name: Validate registry entries
+  ansible.builtin.assert:
+    that:
+      - item | community.general.uri
+    fail_msg: "Invalid registry URI: {{ item }}"
+  loop: "{{ registries_search + registries_insecure + registries_block }}"
+
+- name: Configure registries
+  ansible.builtin.template:
+    src: registries.conf.j2
+    dest: /etc/containers/registries.conf
+    owner: root
+    group: root
+    mode: '0644'
