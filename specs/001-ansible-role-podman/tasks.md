@@ -86,17 +86,17 @@ description: "Task list template for feature implementation"
 
 ### Implementation for User Story 2
 
-- [ ] T023 [US2] Define `registries_search`, `registries_insecure`, `registries_block` variables in `/home/apaz074/projects/ansible-role-podman/defaults/main.yml`
-- [ ] T024 [P] [US2] Implement `registries.conf` generation using `registries_search` in `/home/apaz074/projects/ansible-role-podman/tasks/configure_registries.yml`
-- [ ] T025 [P] [US2] Implement `registries.conf` generation using `registries_insecure` in `/home/apaz074/projects/ansible-role-podman/tasks/configure_registries.yml`
-- [ ] T026 [P] [US2] Implement `registries.conf` generation using `registries_block` in `/home/apaz074/projects/ansible-role-podman/tasks/configure_registries.yml`
-- [ ] T027 [US2] Include `configure_registries.yml` in `/home/apaz074/projects/ansible-role-podman/tasks/main.yml`
-- [ ] T028 [US2] Implement URI validation logic for registry entries in `/home/apaz074/projects/ansible-role-podman/tasks/configure_registries.yml`
-- [ ] T029 [US2] Add Molecule test for `registries_search` configuration in `/home/apaz074/projects/ansible-role-podman/molecule/default/verify.yml`
-- [ ] T030 [US2] Add Molecule test for `registries_insecure` configuration in `/home/apaz074/projects/ansible-role-podman/molecule/default/verify.yml`
-- [ ] T031 [US2] Add Molecule test for `registries_block` configuration in `/home/apaz074/projects/ansible-role-podman/molecule/default/verify.yml`
-- [ ] T032 [US2] Add Molecule test for invalid registry URI handling in `/home/apaz074/projects/ansible-role-podman/molecule/default/verify.yml`
-- [ ] T033 [US2] Add Molecule idempotency test for registry configuration in `/home/apaz074/projects/ansible-role-podman/molecule/default/verify.yml`
+- [x] T023 [US2] Define `registries_search`, `registries_insecure`, `registries_block` variables in `/home/apaz074/projects/ansible-role-podman/defaults/main.yml`
+- [x] T024 [P] [US2] Implement `registries.conf` generation using `registries_search` in `/home/apaz074/projects/ansible-role-podman/tasks/configure_registries.yml`
+- [x] T025 [P] [US2] Implement `registries.conf` generation using `registries_insecure` in `/home/apaz074/projects/ansible-role-podman/tasks/configure_registries.yml`
+- [x] T026 [P] [US2] Implement `registries.conf` generation using `registries_block` in `/home/apaz074/projects/ansible-role-podman/tasks/configure_registries.yml`
+- [x] T027 [US2] Include `configure_registries.yml` in `/home/apaz074/projects/ansible-role-podman/tasks/main.yml`
+- [x] T028 [US2] Implement URI validation logic for registry entries in `/home/apaz074/projects/ansible-role-podman/tasks/configure_registries.yml`
+- [x] T029 [US2] Add Molecule test for `registries_search` configuration in `/home/apaz074/projects/ansible-role-podman/molecule/default/verify.yml`
+- [x] T030 [US2] Add Molecule test for `registries_insecure` configuration in `/home/apaz074/projects/ansible-role-podman/molecule/default/verify.yml`
+- [x] T031 [US2] Add Molecule test for `registries_block` configuration in `/home/apaz074/projects/ansible-role-podman/molecule/default/verify.yml`
+- [x] T032 [US2] Add Molecule test for invalid registry URI handling in `/home/apaz074/projects/ansible-role-podman/molecule/default/verify.yml`
+- [x] T033 [US2] Add Molecule idempotency test for registry configuration in `/home/apaz074/projects/ansible-role-podman/molecule/default/verify.yml`
 
 **Checkpoint**: All user stories should now be independently functional
 
