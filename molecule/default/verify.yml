@@ -48,3 +48,36 @@
           - "ansible_facts.services['podman.socket'].state == 'running'"
           - "ansible_facts.services['podman.socket'].status == 'enabled'"
       when: ansible_os_family == 'Archlinux'
+
+    - name: Verify registries.search configuration
+      ansible.builtin.ini:
+        path: /etc/containers/registries.conf
+        section: registries.search
+        option: registries
+        value: "[{{ registries_search | map('regex_replace', '^(.*)$', '\\"\\1\\"') | join(', ') }}]"
+        state: present
+      check_mode: true
+      register: search_check
+      failed_when: search_check.changed
+
+    - name: Verify registries.insecure configuration
+      ansible.builtin.ini:
+        path: /etc/containers/registries.conf
+        section: registries.insecure
+        option: registries
+        value: "[{{ registries_insecure | map('regex_replace', '^(.*)$', '\\"\\1\\"') | join(', ') }}]"
+        state: present
+      check_mode: true
+      register: insecure_check
+      failed_when: insecure_check.changed
+
+    - name: Verify registries.block configuration
+      ansible.builtin.ini:
+        path: /etc/containers/registries.conf
+        section: registries.block
+        option: registries
+        value: "[{{ registries_block | map('regex_replace', '^(.*)$', '\\"\\1\\"') | join(', ') }}]"
+        state: present
+            check_mode: true
+            register: block_check
+            failed_when: block_check.changed

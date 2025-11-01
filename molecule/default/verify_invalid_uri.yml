@@ -1,0 +1,19 @@
+---
+- name: Verify Invalid URI Handling
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Attempt to converge with an invalid registry URI
+      block:
+        - name: Converge with invalid URI
+          ansible.builtin.include_role:
+            name: ansible-role-podman
+          vars:
+            registries_search: ["invalid_uri!"]
+      rescue:
+        - name: Check that the role failed as expected
+          ansible.builtin.assert:
+            that:
+              - "'Invalid registry URI' in ansible_failed_result.msg"
+            fail_msg: "The role did not fail as expected on an invalid URI."
+            success_msg: "The role correctly failed on an invalid URI."
