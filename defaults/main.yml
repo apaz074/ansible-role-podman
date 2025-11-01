@@ -4,6 +4,6 @@
 podman_package_name: "podman"
 podman_service_name: "podman.socket"
 
-registries_search: []
+registries_search: ["docker.io", "ghcr.io", "quay.io", "registry.fedoraproject.org"]
 registries_insecure: []
 registries_block: []
