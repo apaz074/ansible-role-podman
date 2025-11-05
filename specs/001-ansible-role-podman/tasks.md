@@ -107,7 +107,7 @@ description: "Task list template for feature implementation"
 **Purpose**: Improvements that affect multiple user stories
 
 - [ ] T034 [P] Update `README.md` with input variables documentation in `/home/apaz074/projects/ansible-role-podman/README.md`
-- [ ] T035 [P] Run `ansible-lint` and `yamllint` to ensure code quality across the role
+- [x] T035 [P] Run `ansible-lint` and `yamllint` to ensure code quality across the role
 - [ ] T036 Code cleanup and refactoring for the entire role
 - [ ] T037 Run `ruff check .` for Python code linting in `/home/apaz074/projects/ansible-role-podman/`
 - [ ] T038 Final review of all documentation and code

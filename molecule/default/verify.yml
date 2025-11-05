@@ -54,7 +54,7 @@
         path: /etc/containers/registries.conf
         section: registries.search
         option: registries
-        value: "[{{ registries_search | map('regex_replace', '^(.*)$', '\\"\\1\\"') | join(', ') }}]"
+        value: "{{ registries_search | to_json }}"
         state: present
       check_mode: true
       register: search_check
@@ -65,7 +65,7 @@
         path: /etc/containers/registries.conf
         section: registries.insecure
         option: registries
-        value: "[{{ registries_insecure | map('regex_replace', '^(.*)$', '\\"\\1\\"') | join(', ') }}]"
+        value: "{{ registries_insecure | to_json }}"
         state: present
       check_mode: true
       register: insecure_check
@@ -76,8 +76,8 @@
         path: /etc/containers/registries.conf
         section: registries.block
         option: registries
-        value: "[{{ registries_block | map('regex_replace', '^(.*)$', '\\"\\1\\"') | join(', ') }}]"
+        value: "{{ registries_block | to_json }}"
         state: present
-            check_mode: true
-            register: block_check
-            failed_when: block_check.changed
+      check_mode: true
+      register: block_check
+      failed_when: block_check.changed
